@@ -43,7 +43,6 @@ if (preloader) {
 //========================================================
 // Admin Aside bar Show/Hide Function
 //========================================================
-
 bars.addEventListener("click", () => {
   aside.classList.toggle("left");
 });
@@ -54,3 +53,21 @@ if (window.innerWidth > 768) {
     adminFooter.classList.toggle("no-margin-left");
   });
 }
+
+//========================================================
+// Admin Hamburger Button Animate Function
+//========================================================
+// const hamburgerBtn = document.querySelector(".hamburger-button");
+// const hamburgerIcon = hamburgerBtn.querySelector("i");
+
+// hamburgerBtn.addEventListener("click", () => {
+//   hamburgerBtn.classList.toggle("active");
+
+//   if (hamburgerIcon.classList.contains("fa-bars")) {
+//     hamburgerIcon.classList.remove("fa-bars");
+//     hamburgerIcon.classList.add("fa-times"); // or fa-times if you're using older FA
+//   } else {
+//     hamburgerIcon.classList.remove("fa-times");
+//     hamburgerIcon.classList.add("fa-bars");
+//   }
+// });

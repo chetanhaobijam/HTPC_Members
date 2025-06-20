@@ -223,6 +223,14 @@ html {
 }
 
 @media (min-width: 430px) {
+  .fs-xs-2 {
+    font-size: 2rem !important;
+  }
+
+  .fs-xs-3 {
+    font-size: 1.75rem !important;
+  }
+
   .fs-xs-4 {
     font-size: calc(1.275rem + 0.3vw) !important;
   }
@@ -291,6 +299,19 @@ html {
 .navbar .admin-dropdown ul li {
   min-width: 150px;
 }
+
+.hamburger-button {
+  outline: none;
+}
+
+/* .hamburger-button i {
+  transition: transform 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.hamburger-button.active i {
+  transform: rotate(180deg);
+} */
 
 @media (max-width: 576px) {
   .nav-items {
@@ -441,12 +462,14 @@ html {
   width: 30px;
 }
 
-.aside h2 {
-  font-size: 1rem;
+.aside h2,
+.aside h2 .nav-link,
+.aside h2 span {
+  font-size: 1.1rem !important;
 }
 
 .aside .accordion-item .nav-link {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .admin-main {

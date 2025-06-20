@@ -19,20 +19,23 @@
 </head>
 
 <body>
-
-    <nav class="navbar fixed-top shadow bg-transparent-violet">
-        <div class="container-fluid d-flex flex-column flex-sm-row align-items-start align-items-sm-center py-2 px-3">
+    <!-- Navbar -->
+    <nav class="navbar fixed-top shadow bg-primary-white">
+        <div class="container-fluid d-flex flex-column flex-sm-row align-items-end align-items-sm-center py-2 px-3">
             <div class="nav-header mb-2 mb-md-0 d-flex align-items-center">
                 <a href="/index.html" class="no-underline">
                     <img src="/img/HTPC_Emblem.png" alt="HTPC Emblem" />
                 </a>
                 <a href="/Index.aspx" class="no-underline d-inline-block ms-3">
-                    <h1 class="admin-header text-header fs-3 mb-0 text-primary-black">HeistTeams PC Crew Member
+                    <h1 class="admin-header text-header fs-5 fs-xs-3 mb-0 text-primary-black">HeistTeams PC Crew Member
                         Management
                     </h1>
                 </a>
             </div>
-            <i class="fa-solid fa-bars mx-3 text-primary-violet text-secondary-violet-hover cursor-pointer fs-3"></i>
+            <button class="hamburger-button border-0 bg-primary-white">
+                <i
+                    class="fa-solid fa-bars mx-3 text-primary-violet text-secondary-violet-hover cursor-pointer fs-3"></i>
+            </button>
         </div>
     </nav>
     <aside class="aside p-3 text-light">
@@ -41,57 +44,44 @@
                 <div class="header-link d-flex">
                     <i class="fa-solid fa-chart-line header-icon fs-5"></i>
                     <h2>
-                        <a href="./Dashboard.aspx" class="fw-light nav-link">Dashboard</a>
-                    </h2>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-light" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-page-content" aria-expanded="false"
-                            aria-controls="flush-collapseOne">
-                            <i class="fa-solid fa-window-maximize header-icon" style="color: #ffffff;"></i>
-                            Page Contents
-                        </button>
-                    </h2>
-                    <div id="flush-page-content" class="accordion-collapse collapse" data-bs-parent="#accordion">
-                        <div class="accordion-body">
-                            <ul>
-                                <li class="aside-list d-flex text-light align-items-center">
-                                    <a href="./HomePageContent.aspx" class="nav-link">Home Page Content</a>
-                                </li>
-                                <li class="aside-list d-flex text-light align-items-center">
-                                    <a href="./AboutUsContent.aspx" class="nav-link">About Us Content</a>
-                                </li>
-                                <li class="aside-list d-flex text-light align-items-center">
-                                    <a href="./FeaturesContent.aspx" class="nav-link">Features Content</a>
-                                </li>
-                                <li class="aside-list d-flex text-light align-items-center">
-                                    <a href="./SmartCityContent.aspx" class="nav-link">Smart City Content</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="header-link d-flex">
-                    <i class="fa-solid fa-calendar header-icon fs-5"></i>
-                    <h2>
-                        <a href="./Notices.aspx" class="fw-light nav-link">Notices</a>
-                    </h2>
-                </div>
-
-                <div class="header-link d-flex">
-                    <i class="fa-solid fa-image header-icon fs-5"></i>
-                    <h2>
-                        <a href="./Gallery.aspx" class="fw-light nav-link">Gallery</a>
+                        <a href="./index.html" class="fw-light nav-link">Dashboard</a>
                     </h2>
                 </div>
 
                 <div class="header-link d-flex">
                     <i class="fa-solid fa-user-tie header-icon fs-5"></i>
                     <h2>
-                        <a href="./Users.aspx" class="fw-light nav-link">Manage Admins</a>
+                        <a href="./staff_members.html" class="fw-light nav-link">Staff Members</a>
+                    </h2>
+                </div>
+                <div class="header-link d-flex">
+                    <i class="fa-solid fa-users header-icon fs-5"></i>
+                    <h2>
+                        <a href="./all_members.html" class="fw-light nav-link">All Members</a>
+                    </h2>
+                </div>
+                <div class="header-link d-flex">
+                    <i class="fa-solid fa-user-check header-icon fs-5"></i>
+                    <h2>
+                        <a href="./joined_members.html" class="fw-light nav-link">Joined Members</a>
+                    </h2>
+                </div>
+                <div class="header-link d-flex">
+                    <i class="fa-solid fa-circle-exclamation header-icon fs-5"></i>
+                    <h2>
+                        <a href="./warned_members.html" class="fw-light nav-link">Warned Members</a>
+                    </h2>
+                </div>
+                <div class="header-link d-flex">
+                    <i class="fa-solid fa-user-xmark header-icon fs-5"></i>
+                    <h2>
+                        <a href="./kicked_members.html" class="fw-light nav-link">Kicked Members</a>
+                    </h2>
+                </div>
+                <div class="header-link d-flex">
+                    <i class="fa-solid fa-user-large-slash header-icon fs-5"></i>
+                    <h2>
+                        <a href="./banned_members.html" class="fw-light nav-link">Banned Members</a>
                     </h2>
                 </div>
             </div>

@@ -1,0 +1,68 @@
+[
+  {
+    "joining_date": "2025-06-18",
+    "discord_name": "Chetanhaobijam",
+    "discord_id": "723894671310585000",
+    "social_club_id": "Chetanhaobijam",
+    "joined": false,
+    "kicked": {
+      "kicked_date": null,
+      "banned_reason": null
+    },
+    "banned": {
+      "banned_date": null,
+      "banned_reason": null
+    },
+    "warnings": []
+  },
+  {
+    "joining_date": "2025-06-18",
+    "discord_name": "Salad_VR",
+    "discord_id": "723894671310585200",
+    "social_club_id": "Salad_VR",
+    "joined": false,
+    "kicked": {
+      "kicked_date": "2025-06-21",
+      "banned_reason": "Multiple Warnings"
+    },
+    "banned": {
+      "banned_date": null,
+      "banned_reason": null
+    },
+    "warnings": [
+      {
+        "warning_date": "2025-06-21",
+        "warning_type": "Afking as CEO"
+      },
+      {
+        "warning_date": "2025-06-21",
+        "warning_type": "Spamming Invites"
+      },
+      {
+        "warning_date": "2025-06-21",
+        "warning_type": "Afking as CEO"
+      }
+    ]
+  },
+  {
+    "joining_date": "2025-06-21",
+    "discord_name": "Kamileon",
+    "discord_id": "723894671310585500",
+    "social_club_id": "Kamileon",
+    "joined": false,
+    "kicked": {
+      "kicked_date": null,
+      "banned_reason": null
+    },
+    "banned": {
+      "banned_date": "2025-06-21",
+      "banned_reason": "Griefing Player"
+    },
+    "warnings": [
+      {
+        "warning_date": "2025-06-21",
+        "warning_type": "Griefing Player"
+      }
+    ]
+  }
+]

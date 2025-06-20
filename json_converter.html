@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV to Nested JSON Converter</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-top: 1rem;
+        }
+
+        .output-container {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSV to Nested JSON Converter</h1>
+    <input type="file" id="csvFile" accept=".csv" />
+    <button onclick="downloadJSON()">Download JSON</button>
+
+    <div class="output-container">
+        <h3>Converted JSON:</h3>
+        <textarea id="jsonOutput" readonly></textarea>
+    </div>
+
+    <script>
+        document.getElementById('csvFile').addEventListener('change', function (e) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                const rows = reader.result.trim().split("\n");
+                const headers = rows[0].split(",");
+
+                const data = rows.slice(1).map(row => {
+                    const values = row.split(",");
+                    const obj = {};
+
+                    values.forEach((val, i) => {
+                        const key = headers[i].trim();
+                        obj[key] = val.trim();
+                    });
+
+                    return {
+                        joining_date: obj.joining_date,
+                        discord_name: obj.discord_name,
+                        discord_id: obj.discord_id,
+                        social_club_id: obj.social_club_id,
+                        joined: obj.joined === "true",
+
+                        kicked: {
+                            kicked_date: obj.kicked_date || null,
+                            banned_reason: obj.kicked_reason || null
+                        },
+
+                        banned: {
+                            banned_date: obj.banned_date || null,
+                            banned_reason: obj.banned_reason || null
+                        },
+
+                        warnings: [
+                            ...(obj.warning_1_date ? [{
+                                warning_date: obj.warning_1_date,
+                                warning_type: obj.warning_1_type
+                            }] : []),
+                            ...(obj.warning_2_date ? [{
+                                warning_date: obj.warning_2_date,
+                                warning_type: obj.warning_2_type
+                            }] : []),
+                            ...(obj.warning_3_date ? [{
+                                warning_date: obj.warning_3_date,
+                                warning_type: obj.warning_3_type
+                            }] : [])
+                        ]
+                    };
+                });
+
+                const jsonString = JSON.stringify(data, null, 2);
+                document.getElementById('jsonOutput').value = jsonString;
+            };
+            reader.readAsText(e.target.files[0]);
+        });
+
+        function downloadJSON() {
+            const blob = new Blob([document.getElementById('jsonOutput').value], { type: 'application/json' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'converted.json';
+            link.click();
+        }
+    </script>
+</body>
+
+</html>

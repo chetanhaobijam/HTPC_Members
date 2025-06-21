@@ -532,6 +532,10 @@ html {
   height: 70svh;
 }
 
+.dashboard-banner .banner-logo img {
+  min-width: 180px;
+}
+
 .dashboard-content .card {
   min-height: 165px;
   max-width: 350px;

@@ -1,9 +1,8 @@
 const scrollToTopButton = document.querySelector(".scroll-to-top-button");
 const bars = document.querySelector(".fa-bars");
 const aside = document.querySelector(".aside");
-const adminMain = document.querySelector(".admin-main");
-const adminFooter = document.querySelector(".admin-footer");
-
+const main = document.querySelector(".main");
+const footer = document.querySelector(".footer");
 //========================================================
 // Scroll to Top Function
 //========================================================
@@ -49,8 +48,8 @@ bars.addEventListener("click", () => {
 
 if (window.innerWidth > 768) {
   bars.addEventListener("click", () => {
-    adminMain.classList.toggle("no-margin-left");
-    adminFooter.classList.toggle("no-margin-left");
+    main.classList.toggle("no-margin-left");
+    footer.classList.toggle("no-margin-left");
   });
 }
 
